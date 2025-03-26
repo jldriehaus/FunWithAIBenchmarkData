@@ -1,6 +1,19 @@
+# File Name : FunWithAIBenchmarkData
+# Student Name: Jack Driehaus and Madison Geier
+# email:  driehajl@mail.uc.edu
+# Assignment Number: Assignment 08
+# Due Date:   03/27/2025
+# Course #/Section:   IS4010-002
+# Semester/Year:   spring 2025
+# Brief Description of the assignment:  Display an image and some interesting data visualization
+
+# Brief Description of what this module does. Runs the code that shows the picture and data visualization
+# Citations: chatgpt.com and grok.com
+
+# Anything else that's relevant: I chose to use the results file for the data visualization 
+
 # main.py
-# Bill Nicholson
-# nicholdw@ucmail.uc.edu
+
 
 from readingLevelPackage.readingLevel import Reading_Level
 from utilitiesPackage.utilities import *
@@ -8,7 +21,8 @@ from utilitiesPackage.CSV_Utilities import *
 from PDFPackage.PDFUtilities import *
 
 if __name__ == "__main__":
-
+    '''
+    # Commenting out all the original code from the github repo and putting my new code for the assignment under it
     CSV_Processor = MMLU_CSV_Processor("dataPackage/MMLU/data/", ["management_test.csv"])
     questions = CSV_Processor.read_data()
     print(len(questions), "questions read")
@@ -45,7 +59,7 @@ if __name__ == "__main__":
     #6b. Write the question identifier (see 6a, above) and the correct answer to another text file. Use a CSV format.
     questions_written = write_questions_to_text_files("MMLU", questions)
     print(questions_written, "questions written to the file.")
-    
+    '''
     """
     # This code is commented out
     #Reading_Level.test01()
@@ -61,3 +75,17 @@ if __name__ == "__main__":
     for key in reading_level_indices.keys():
         print(key, ":", reading_level_indices[key])
     """
+
+
+
+    # main.py
+    from Motorola68000 import  Motorola68000_functions
+ 
+
+    def main():
+        Motorola68000_functions.display_team_image()
+        data = Motorola68000_functions.load_benchmark_data()
+        Motorola68000_functions.visualize_benchmark_data(data)
+
+    if __name__ == "__main__":
+        main()

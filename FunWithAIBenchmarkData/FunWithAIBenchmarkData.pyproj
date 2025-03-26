@@ -28,6 +28,12 @@
     <Compile Include="mainPackage\__init__.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Motorola68000\Motorola68000_functions.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Motorola68000\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PDFPackage\PDFUtilities.py">
       <SubType>Code</SubType>
     </Compile>
@@ -56,6 +62,7 @@
     <Folder Include="dataPackage\MMLU\data\" />
     <Folder Include="dataPackage\MMLU\results\" />
     <Folder Include="mainPackage\" />
+    <Folder Include="Motorola68000\" />
     <Folder Include="PDFPackage\" />
     <Folder Include="readingLevelPackage\" />
     <Folder Include="utilitiesPackage\" />
