@@ -89,7 +89,14 @@ def visualize_benchmark_data(data):
     # Display the plot
     plt.show()
 
-    def plot_pie_chart(data):
+    
+
+def plot_pie_chart(data):
+    # Ensure data is not empty
+    if data.empty or "correct_answer" not in data:
+        print("No valid data available for pie chart.")
+        return
+    
     # Count occurrences of each answer
     answer_counts = data["correct_answer"].value_counts()
     
@@ -101,7 +108,8 @@ def visualize_benchmark_data(data):
     
     # Create a pie chart
     plt.figure(figsize=(8, 8))
-    plt.pie(answer_counts, labels=answer_counts.index, autopct="%1.1f%%", colors=colors, startangle=140, wedgeprops={"edgecolor": "black"})
+    plt.pie(answer_counts, labels=answer_counts.index, autopct="%1.1f%%", 
+            colors=colors, startangle=140, wedgeprops={"edgecolor": "black"})
     
     # Add a title
     plt.title("Proportion of Correct Answers (A, B, C, D)", fontsize=14, pad=20)
@@ -109,6 +117,8 @@ def visualize_benchmark_data(data):
     # Display the chart
     plt.show()
 
+# Load data
+data = load_benchmark_data()
+
 # Call the function
 plot_pie_chart(data)
-
