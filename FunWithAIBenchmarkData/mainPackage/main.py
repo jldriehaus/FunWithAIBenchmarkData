@@ -1,6 +1,6 @@
 # File Name : FunWithAIBenchmarkData
 # Student Name: Jack Driehaus and Madison Geier
-# email:  driehajl@mail.uc.edu
+# email:  driehajl@mail.uc.edu & geierml@mail.uc.edu
 # Assignment Number: Assignment 08
 # Due Date:   03/27/2025
 # Course #/Section:   IS4010-002
