@@ -117,8 +117,3 @@ def plot_pie_chart(data):
     # Display the chart
     plt.show()
 
-# Load data
-data = load_benchmark_data()
-
-# Call the function
-plot_pie_chart(data)

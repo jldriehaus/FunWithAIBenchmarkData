@@ -85,6 +85,8 @@ if __name__ == "__main__":
     def main():
         Motorola68000_functions.display_team_image()
         data = Motorola68000_functions.load_benchmark_data()
+        Motorola68000_functions.plot_pie_chart(data)
+        data = Motorola68000_functions.load_benchmark_data()
         Motorola68000_functions.visualize_benchmark_data(data)
 
     if __name__ == "__main__":
