@@ -1,6 +1,6 @@
 # File Name : FunWithAIBenchmarkData
 # Student Name: Jack Driehaus and Madison Geier
-# email:  driehajl@mail.uc.edu
+# email:  driehajl@mail.uc.edu & geierml@mail.uc.edu
 # Assignment Number: Assignment 08
 # Due Date:   03/27/2025
 # Course #/Section:   IS4010-002
@@ -89,4 +89,26 @@ def visualize_benchmark_data(data):
     # Display the plot
     plt.show()
 
+    def plot_pie_chart(data):
+    # Count occurrences of each answer
+    answer_counts = data["correct_answer"].value_counts()
+    
+    # Ensure all options (A, B, C, D) are present
+    answer_counts = answer_counts.reindex(["A", "B", "C", "D"], fill_value=0)
+
+    # Define colors
+    colors = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728"]
+    
+    # Create a pie chart
+    plt.figure(figsize=(8, 8))
+    plt.pie(answer_counts, labels=answer_counts.index, autopct="%1.1f%%", colors=colors, startangle=140, wedgeprops={"edgecolor": "black"})
+    
+    # Add a title
+    plt.title("Proportion of Correct Answers (A, B, C, D)", fontsize=14, pad=20)
+    
+    # Display the chart
+    plt.show()
+
+# Call the function
+plot_pie_chart(data)
 
